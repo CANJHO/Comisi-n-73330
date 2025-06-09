@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <title>Boutique Yanina</title>
+    <link rel="icon" type="image/png" href="imgenes/logooriginality.PNG">
+</head>
+
+<body>
+    <header class="sticky-top">
+        <!--logo y nombre de la tienda redes sociales, formulario de busqueda -->
+        <div
+            class="container-fluid navbar-dark bg-dark d-flex justify-content-between align-items-center position-relative">
+            <!-- ocultamos los iconos en pantallas moviles -->
+            <button class="navbar-toggler ms-2 d-sm-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="ms-2 d-none d-sm-block">
+                <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="bi bi-youtube"></i></a>
+                <a href="https://www.tiktok.com/login" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+
+            </div>
+            <a class="navbar-brand ms-2" href="#">
+                <img src="./imgenes/logooriginality.png" alt="logo" width="90" height="90"
+                    class="d-inline-block align-text-center"> <span>Boutique Yanina</span>
+            </a>
+            <div class="d-flex align-items-center">
+                <!-- formulario de busqueda -->
+                <form class="d-flex" role="search" method="post">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Input visible solo en pantallas grandes -->
+                            <div class="col d-none d-lg-block">
+                                <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar" />
+                            </div>
+                            <!-- Botón de búsqueda (visible siempre) -->
+                            <div class="col-auto">
+                                <button class="btn btn-link text-white" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#mobileSearchInput" aria-expanded="false"
+                                    aria-controls="mobileSearchInput">
+                                    <i class="bi bi-search" style="font-size: 1rem;"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Input colapsable para móviles (ocupa toda la fila) -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="collapse d-lg-none mt-2" id="mobileSearchInput">
+                                    <input class="form-control w-100" type="search" placeholder="Buscar"
+                                        aria-label="Buscar" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!-- icono carrito -->
+                <a href="#offcanvasCarrito" class="d-none d-sm-block" data-bs-toggle="offcanvas" role="button"
+                    aria-controls="offcanvasCarrito">
+                    <i class="bi bi-cart"></i>
+                </a>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito"
+                    aria-labelledby="offcanvasCarritoLabel">
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvasCarritoLabel">Tu carrito</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Cerrar"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <p>Tu carrito esta vacío.</p>
+                    </div>
+                </div>
+                <!-- Icono persona -->
+                <div class="dropdown d-none d-sm-block">
+                    <a class="btn dropdown-toggle" href="#" role="button" id="dropdownUser" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="bi bi-person"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser">
+                        <li><a class="dropdown-item" href="./persona/iniciar_sesion.html">Iniciar Sesión</a></li>
+                        <li><a class="dropdown-item" href="./persona/registrarse.html">Registrase</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                data-bs-target="#modalSesionRequerida">Lista de deseo</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!--menu de navegación-->
+        <nav class="navbar navbar-expand-sm">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo01">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-black ms-2" aria-current="page" href="#">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active text-black ms-2" aria-current="page"
+                            href="./htmls/accesorios.html">Accesosrios</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active text-black ms-2" aria-current="page"
+                            href="./htmls/oferta.html">Oferta</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active text-black ms-2" aria-current="page"
+                            href="./htmls/tienda.html">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-black ms-2" aria-current="page"
+                            href="./htmls/contacto.html">Contactanos</a>
+                    </li>
+                </ul>
+
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- video de presentación de la pagina -->
+    <section class="video-section mt-5">
+        <div class="container-fluid p-0">
+            <video src="./videos/videos_crads.mp4" class="video-fluid" autoplay loop></video>
+        </div>
+    </section>
+
+
+    <!-- parte principal de la pagina -->
+    <main>
+        <section class="container text-center my-5">
+            <div class="mb-4">
+                <h2 class="fw-bold">COMPRAR POR COLECCIÓN</h2>
+                <p class="text-muted">Una experiencia excepcional</p>
+                <div class="decorative-line mx-auto"></div>
+            </div>
+
+            <div class="row justify-content-center g-4">
+                <!-- tienda -->
+                <div class="col-12 col-sm-6 col-md-4 d-flex flex-column align-items-center">
+                    <a href="./htmls/tienda.html" class="text-decoration-none text-dark text-center w-75 h-75">
+                        <img src="./imgenes/inicio_01.jpg" alt="Polo Rojo" class="img-fluid rounded shadow image-hover">
+                        <h2 class="mt-3">Tienda</h2>
+                    </a>
+                </div>
+
+                <!-- aferta -->
+                <div class="col-12 col-sm-6 col-md-4 d-flex flex-column align-items-center">
+                    <a href="./htmls/oferta.html" class="text-decoration-none text-dark text-center w-75 h-75">
+                        <img src="./imgenes/inicio_05.jpg" alt="Polo Marrón"
+                            class="img-fluid rounded shadow image-hover">
+                        <h2 class="mt-3">Oferta</h2>
+                    </a>
+                </div>
+
+                <!-- solo para ti -->
+                <div class="col-12 col-sm-6 col-md-4 d-flex flex-column align-items-center">
+                    <a href="./htmls/contacto.html" class="text-decoration-none text-dark text-center w-75 h-75">
+                        <img src="./imgenes/inicio_03.jpg" alt="Polo Violeta"
+                            class="img-fluid rounded shadow image-hover">
+                        <h2 class="mt-3">Contactanos</h2>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- carrusel visibles para pantallas grandes -->
+    <section>
+        <!-- productos nuevos -->
+        <!-- Título y subtítulo -->
+        <header class="mb-4 text-center my-5 d-none d-md-block">
+            <h2 class="fw-bold">PRODDUCTOS NUEVOS</h2>
+            <p class="text-muted">Una experiencia excepcional</p>
+            <div class="decorative-line mx-auto"></div>
+        </header>
+        <!-- Primer grupo de imágenes -->
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner d-none d-md-block">
+                <div class="carousel-item active">
+                    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-5">
+                        <!-- Imagen 1 -->
+                        <div class="card">
+                            <img src="./imgenes/inicio_06.jpg" class="card-img-top" alt="polo_manga_corta_verde">
+                            <div class="card-body">
+                                <h5 class="card-title">Blusa manga corta</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#ModalImagen1">Detalles</a>
+                            </div>
+                        </div>
+                        <!-- Imagen 2 -->
+                        <div class="card">
+                            <img src="./imgenes/inicio08.jpg" class="card-img-top" alt="polo_manga_corta_verde">
+                            <div class="card-body">
+                                <h5 class="card-title">Blusa manga corta</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#ModalImagen2">Detalles</a>
+                            </div>
+                        </div>
+                        <!-- Imagen 3 -->
+                        <div class="card">
+                            <img src="./imgenes/inicio_09.jpg" class="card-img-top" alt="polo_manga_corta_rosado">
+                            <div class="card-body">
+                                <h5 class="card-title">Blusa manga corta</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#ModalImagen3">Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Segundo grupo de imágenes -->
+                <div class="carousel-item">
+                    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-5">
+                        <!-- Imagen 4 -->
+                        <div class="card">
+                            <img src="./imgenes/inicio_09.jpg" class="card-img-top" alt="polo_manga_corta_rosado">
+                            <div class="card-body">
+                                <h5 class="card-title">Blusa manga corta</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#ModalImagen4">Detalles</a>
+                            </div>
+                        </div>
+                        <!-- Imagen 5 -->
+                        <div class="card">
+                            <img src="./imgenes/inicio_06.jpg" class="card-img-top" alt="polo_manga_corta_verde">
+                            <div class="card-body">
+                                <h5 class="card-title">Blusa manga corta5</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#ModalImagen5">Detalles</a>
+                            </div>
+                        </div>
+                        <!-- Imagen 6 -->
+                        <div class="card">
+                            <img src="./imgenes/inicio08.jpg" class="card-img-top" alt="polo_manga_corta_verde">
+                            <div class="card-body">
+                                <h5 class="card-title">Blusa manga corta</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#ModalImagen6">Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles -->
+            <button class="carousel-control-prev d-none d-md-block" type="button"
+                data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next d-none d-md-block" type="button"
+                data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="section-productos">
+        <!-- Título y subtítulo -->
+        <header class="mb-4 text-center my-5 d-none d-md-block">
+            <h2 class="fw-bold">Productos más populares</h2>
+            <p class="text-muted">Una experiencia excepcional</p>
+            <div class="decorative-line mx-auto"></div>
+        </header>
+        <!-- Primer grupo de imágenes -->
+        <div id="carouselExampleInterval2" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner d-none d-md-block">
+                <div class="carousel-item active">
+                    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-5">
+                        <!-- Imagen 1 -->
+                        <div class="card position-relative" style="z-index: 10">
+                            <img src="./imgenes/inicio_06.jpg" class="card-img-top" alt="Blusa verde manga corta">
+                            <a href="#" class="btn btn-danger position-absolute top-0 start-0 m-4">¡Oferta!</a>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Blusa manga corta</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#ModalImagen1">Detalles</a>
+                            </div>
+                        </div>
+                        <!-- Imagen 2 -->
+                        <div class="card position-relative">
+                            <img src="./imgenes/inicio08.jpg" class="card-img-top" alt="Blusa celeste cuello redondo">
+                            <a href="#" class="btn btn-danger position-absolute top-0 start-0 m-4">¡Oferta!</a>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Blusa manga corta</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#ModalImagen2">Detalles</a>
+                            </div>
+                        </div>
+                        <!-- Imagen 3 -->
+                        <div class="card position-relative">
+                            <img src="./imgenes/inicio_09.jpg" class="card-img-top" alt="Blusa rosada estampada">
+                            <a href="#" class="btn btn-danger position-absolute top-0 start-0 m-4">¡Oferta!</a>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Blusa manga corta</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#ModalImagen3">Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Segundo grupo de imágenes -->
+                <div class="carousel-item">
+                    <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-5">
+                        <!-- Imagen 4 -->
+                        <div class="card position-relative" style="z-index: 10">
+                            <img src="./imgenes/inicio_09.jpg" class="card-img-top" alt="Blusa rosada estampada">
+                            <a href="#" class="btn btn-danger position-absolute top-0 start-0 m-4">¡Oferta!</a>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Blusa manga corta</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#ModalImagen4">Detalles</a>
+                            </div>
+                        </div>
+                        <!-- Imagen 5 -->
+                        <div class="card position-relative">
+                            <img src="./imgenes/inicio_06.jpg" class="card-img-top" alt="Blusa verde manga corta">
+                            <a href="#" class="btn btn-danger position-absolute top-0 start-0 m-4">¡Oferta!</a>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Blusa manga corta</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#ModalImagen5">Detalles</a>
+                            </div>
+                        </div>
+                        <!-- Imagen 6 -->
+                        <div class="card position-relative">
+                            <img src="./imgenes/inicio08.jpg" class="card-img-top" alt="Blusa celeste cuello redondo">
+                            <a href="#" class="btn btn-danger position-absolute top-0 start-0 m-4">¡Oferta!</a>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Blusa manga corta</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#ModalImagen6">Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles -->
+            <button class="carousel-control-prev d-none d-md-block" type="button"
+                data-bs-target="#carouselExampleInterval2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next d-none d-md-block" type="button"
+                data-bs-target="#carouselExampleInterval2" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+    <!-- Carrusel visible solo en pantallas móviles -->
+    <section class="d-block d-md-none my-5">
+        <!-- Título y subtítulo -->
+        <div class="mb-4 text-center">
+            <h2 class="fw-bold">PRODUCTOS NUEVOS</h2>
+            <p class="text-muted">Una experiencia excepcional</p>
+            <div class="decorative-line mx-auto"></div>
+        </div>
+        <!-- Carrusel -->
+        <div id="carouselExampleInterval4" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <!-- Imagen 1 -->
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center">
+                        <div class="card">
+                            <img src="./imgenes/inicio_06.jpg" class="card-img-top" alt="polo_manga_corta_verde">
+                            <div class="card-body">
+                                <h5 class="card-title">Blusa manga corta</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#miModalImagen1">Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagen 2 -->
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="card">
+                            <img src="./imgenes/inicio08.jpg" class="card-img-top" alt="polo_manga_corta_verde">
+                            <div class="card-body">
+                                <h5 class="card-title">Blusa manga corta</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#ModalImagen2">Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagen 3 -->
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="card">
+                            <img src="./imgenes/inicio_09.jpg" class="card-img-top" alt="polo_manga_corta_rosado">
+                            <div class="card-body">
+                                <h5 class="card-title">Blusa manga corta</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#ModalImagen3">Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagen 4 -->
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="card">
+                            <img src="./imgenes/inicio_09.jpg" class="card-img-top" alt="polo_manga_corta_rosado">
+                            <div class="card-body">
+                                <h5 class="card-title">Blusa manga corta</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#ModalImagen4">Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagen 5 -->
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="card">
+                            <img src="./imgenes/inicio_06.jpg" class="card-img-top" alt="polo_manga_corta_verde">
+                            <div class="card-body">
+                                <h5 class="card-title">Blusa manga corta5</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#ModalImagen5">Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagen 6 -->
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="card">
+                            <img src="./imgenes/inicio08.jpg" class="card-img-top" alt="polo_manga_corta_verde">
+                            <div class="card-body">
+                                <h5 class="card-title">Blusa manga corta</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#ModalImagen6">Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval4"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval4"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+    <section class="d-block d-md-none my-5">
+        <!-- Título y subtítulo -->
+        <div class="mb-4 text-center">
+            <h2 class="fw-bold">Productos más populares</h2>
+            <p class="text-muted">Una experiencia excepcional</p>
+            <div class="decorative-line mx-auto"></div>
+        </div>
+
+        <!-- Carrusel -->
+        <div id="carouselExampleInterval5" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Imagen 1 -->
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center">
+                        <div class="card">
+                            <img src="./imgenes/inicio_06.jpg" class="card-img-top" alt="polo_manga_corta_verde">
+                            <a href="./htmls/oferta.html"
+                                class="btn btn-danger position-absolute top-0 start-0 m-4">¡Oferta!</a>
+                            <div class="card-body">
+                                <h5 class="card-title">Blusa manga corta</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#ModalImagen1">Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagen 2 -->
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="card">
+                            <img src="./imgenes/inicio08.jpg" class="card-img-top" alt="polo_manga_corta_verde">
+                            <a href="./htmls/oferta.html"
+                                class="btn btn-danger position-absolute top-0 start-0 m-4">¡Oferta!</a>
+                            <div class="card-body">
+                                <h5 class="card-title">Blusa manga corta</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#ModalImagen2">Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="card">
+                            <img src="./imgenes/inicio_09.jpg" class="card-img-top" alt="polo_manga_corta_rosado">
+                            <a href="./htmls/oferta.html"
+                                class="btn btn-danger position-absolute top-0 start-0 m-4">¡Oferta!</a>
+                            <div class="card-body">
+                                <h5 class="card-title">Blusa manga corta</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#ModalImagen3">Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagen 4 -->
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="card">
+                            <img src="./imgenes/inicio_09.jpg" class="card-img-top" alt="polo_manga_corta_rosado">
+                            <a href="./htmls/oferta.html"
+                                class="btn btn-danger position-absolute top-0 start-0 m-4">¡Oferta!</a>
+                            <div class="card-body">
+                                <h5 class="card-title">Blusa manga corta</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#ModalImagen4">Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagen 5 -->
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="card">
+                            <img src="./imgenes/inicio_06.jpg" class="card-img-top" alt="polo_manga_corta_verde">
+                            <a href="./htmls/oferta.html"
+                                class="btn btn-danger position-absolute top-0 start-0 m-4">¡Oferta!</a>
+                            <div class="card-body">
+                                <h5 class="card-title">Blusa manga corta5</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#ModalImagen5">Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagen 6 -->
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="card">
+                            <img src="./imgenes/inicio08.jpg" class="card-img-top" alt="polo_manga_corta_verde">
+                            <a href="./htmls/oferta.html"
+                                class="btn btn-danger position-absolute top-0 start-0 m-4">¡Oferta!</a>
+                            <div class="card-body">
+                                <h5 class="card-title">Blusa manga corta</h5>
+                                <p class="card-text">Precio: S/. 100.99</p>
+                                <a href="#" class="btn btn-dark" data-bs-toggle="modal"
+                                    data-bs-target="#ModalImagen6">Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval5"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval5"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+    <!-- modal de las card -->
+    <section>
+        <!-- modal del card imagen 1 -->
+        <div class="modal fade" id="ModalImagen1" tabindex="-1" aria-labelledby="ModalImagen1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="d-flex">
+                        <button type="button" class="btn-close ms-auto m-2" data-bs-dismiss="modal"
+                            aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row g-4">
+                                <!-- Imagen 1-->
+                                <div class="col-md-6">
+                                    <div class="hover-img-container img-thumbnail p-0 border-0">
+                                        <!-- Imagen por defecto -->
+                                        <img src="./imgenes/inicio_06.jpg" class="img-default w-100"
+                                            alt="Imagen principal">
+                                        <!-- Imagen al hacer hover -->
+                                        <img src="./imgenes/inicio_06.1.jpg" class="img-hover w-100"
+                                            alt="Imagen al pasar mouse">
+                                    </div>
+                                </div>
+
+                                <!-- Detalles del producto -->
+                                <div class="col-md-6">
+                                    <div>
+                                        <h4 class="fw-bold">Blusa manga corta</h4>
+                                        <div class="mb-2">
+                                            ⭐⭐⭐⭐⭐ <span class="text-muted ms-2">(Aún no hay opiniones)</span>
+                                        </div>
+                                        <h3 class="text-danger">S/. 100.99</h3>
+
+                                        <!-- Tallas -->
+                                        <div class="mt-3">
+                                            <label class="fw-bold">Talla: <span
+                                                    class="text-danger">*obligatorio</span></label>
+                                            <div class="btn-group d-flex flex-wrap gap-2 mt-1" role="group"
+                                                aria-label="Tallas">
+                                                <input type="radio" class="btn-check" name="talla" id="tallaS"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="tallaS">S</label>
+
+                                                <input type="radio" class="btn-check" name="talla" id="tallaM"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="tallaM">M</label>
+
+                                                <input type="radio" class="btn-check" name="talla" id="tallaL"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="tallaL">L</label>
+
+                                                <input type="radio" class="btn-check" name="talla" id="tallaXL"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="tallaXL">XL</label>
+                                            </div>
+                                        </div>
+
+                                        <!-- Colores -->
+                                        <div class="mt-3">
+                                            <label class="fw-bold">Colores Disponibles: <span
+                                                    class="text-danger">*obligatorio</span></label>
+                                            <div class="d-flex gap-2 mt-1">
+                                                <button class="btn border border-dark p-0"
+                                                    style="width: 40px; height: 40px; background-color: rgb(20, 237, 107);"></button>
+                                                <button class="btn border border-dark p-0"
+                                                    style="width: 40px; height: 40px; background-color: #59687a;"></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Cantidad -->
+                                        <div class="mt-3">
+                                            <label class="fw-bold">Cantidad:</label>
+                                            <div class="input-group" style="max-width: 140px;">
+                                                <button class="btn btn-outline-secondary" type="button">-</button>
+                                                <input type="text" class="form-control text-center" value="1">
+                                                <button class="btn btn-outline-secondary" type="button">+</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Botones -->
+                                        <div class="mt-4 d-grid gap-2">
+                                            <button class="btn btn-dark">AGREGAR AL CARRITO</button>
+                                            <button class="btn btn-outline-secondary">Agregar a la lista de
+                                                deseos</button>
+                                        </div>
+
+                                        <!-- SKU -->
+                                        <div class="mt-3 text-muted">
+                                            <small>SKU: 00000000000</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal del card imagen 2 -->
+        <div class="modal fade" id="ModalImagen2" tabindex="-1" aria-labelledby="ModalImagen2Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="d-flex">
+                        <button type="button" class="btn-close ms-auto m-2" data-bs-dismiss="modal"
+                            aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row g-4">
+                                <!-- Imagen 2-->
+                                <div class="col-md-6">
+                                    <div class="hover-img-container img-thumbnail p-0 border-0">
+                                        <img src="./imgenes/inicio08.jpg" class="img-default w-100"
+                                            alt="Imagen principal">
+                                        <img src="./imgenes/incio_08.1.jpg" class="img-hover w-100"
+                                            alt="Imagen al pasar mouse">
+                                    </div>
+                                </div>
+
+                                <!-- Detalles del producto -->
+                                <div class="col-md-6">
+                                    <div>
+                                        <h4 class="fw-bold">Blusa manga corta</h4>
+                                        <div class="mb-2">
+                                            ⭐⭐⭐⭐⭐ <span class="text-muted ms-2">(Aún no hay opiniones)</span>
+                                        </div>
+                                        <h3 class="text-danger">S/. 100.99</h3>
+
+                                        <!-- Tallas -->
+                                        <div class="mt-3">
+                                            <label class="fw-bold">Talla: <span
+                                                    class="text-danger">*obligatorio</span></label>
+                                            <div class="btn-group d-flex flex-wrap gap-2 mt-1" role="group"
+                                                aria-label="Tallas">
+                                                <input type="radio" class="btn-check" name="talla2" id="talla2S"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="talla2S">S</label>
+
+                                                <input type="radio" class="btn-check" name="talla2" id="talla2M"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="talla2M">M</label>
+
+                                                <input type="radio" class="btn-check" name="talla2" id="talla2L"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="talla2L">L</label>
+
+                                                <input type="radio" class="btn-check" name="talla2" id="talla2XL"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="talla2XL">XL</label>
+                                            </div>
+                                        </div>
+
+                                        <!-- Colores -->
+                                        <div class="mt-3">
+                                            <label class="fw-bold">Colores Disponibles: <span
+                                                    class="text-danger">*obligatorio</span></label>
+                                            <div class="d-flex gap-2 mt-1">
+                                                <button class="btn border border-dark p-0"
+                                                    style="width: 40px; height: 40px; background-color: rgb(20, 237, 107);"></button>
+                                                <button class="btn border border-dark p-0"
+                                                    style="width: 40px; height: 40px; background-color: #59687a;"></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Cantidad -->
+                                        <div class="mt-3">
+                                            <label class="fw-bold">Cantidad:</label>
+                                            <div class="input-group" style="max-width: 140px;">
+                                                <button class="btn btn-outline-secondary" type="button">-</button>
+                                                <input type="text" class="form-control text-center" value="1">
+                                                <button class="btn btn-outline-secondary" type="button">+</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Botones -->
+                                        <div class="mt-4 d-grid gap-2">
+                                            <button class="btn btn-dark">AGREGAR AL CARRITO</button>
+                                            <button class="btn btn-outline-secondary">Agregar a la lista de
+                                                deseos</button>
+                                        </div>
+
+                                        <!-- SKU -->
+                                        <div class="mt-3 text-muted">
+                                            <small>SKU: 00000000000</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal del card imagen 3 -->
+        <div class="modal fade" id="ModalImagen3" tabindex="-1" aria-labelledby="ModalImagen3Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="d-flex">
+                        <button type="button" class="btn-close ms-auto m-2" data-bs-dismiss="modal"
+                            aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row g-4">
+                                <!-- Imagen 3-->
+                                <div class="col-md-6">
+                                    <div class="hover-img-container img-thumbnail p-0 border-0">
+                                        <img src="./imgenes/inicio_09.jpg" class="img-default w-100"
+                                            alt="Imagen principal">
+                                        <img src="./imgenes/inicio_09.1.jpg" class="img-hover w-100"
+                                            alt="Imagen al pasar mouse">
+                                    </div>
+                                </div>
+
+                                <!-- Detalles del producto -->
+                                <div class="col-md-6">
+                                    <div>
+                                        <h4 class="fw-bold">Blusa manga corta</h4>
+                                        <div class="mb-2">
+                                            ⭐⭐⭐⭐⭐ <span class="text-muted ms-2">(Aún no hay opiniones)</span>
+                                        </div>
+                                        <h3 class="text-danger">S/. 100.99</h3>
+
+                                        <!-- Tallas -->
+                                        <div class="mt-3">
+                                            <label class="fw-bold">Talla: <span
+                                                    class="text-danger">*obligatorio</span></label>
+                                            <div class="btn-group d-flex flex-wrap gap-2 mt-1" role="group"
+                                                aria-label="Tallas">
+                                                <input type="radio" class="btn-check" name="talla3" id="talla3S"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="talla3S">S</label>
+
+                                                <input type="radio" class="btn-check" name="talla3" id="talla3M"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="talla3M">M</label>
+
+                                                <input type="radio" class="btn-check" name="talla3" id="talla3L"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="talla3L">L</label>
+
+                                                <input type="radio" class="btn-check" name="talla3" id="talla3XL"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="talla3XL">XL</label>
+                                            </div>
+                                        </div>
+
+                                        <!-- Colores -->
+                                        <div class="mt-3">
+                                            <label class="fw-bold">Colores Disponibles: <span
+                                                    class="text-danger">*obligatorio</span></label>
+                                            <div class="d-flex gap-2 mt-1">
+                                                <button class="btn border border-dark p-0"
+                                                    style="width: 40px; height: 40px; background-color: #e596caed;"></button>
+                                                <button class="btn border border-dark p-0"
+                                                    style="width: 40px; height: 40px; background-color: #be5c1a;"></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Cantidad -->
+                                        <div class="mt-3">
+                                            <label class="fw-bold">Cantidad:</label>
+                                            <div class="input-group" style="max-width: 140px;">
+                                                <button class="btn btn-outline-secondary" type="button">-</button>
+                                                <input type="text" class="form-control text-center" value="1">
+                                                <button class="btn btn-outline-secondary" type="button">+</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Botones -->
+                                        <div class="mt-4 d-grid gap-2">
+                                            <button class="btn btn-dark">AGREGAR AL CARRITO</button>
+                                            <button class="btn btn-outline-secondary">Agregar a la lista de
+                                                deseos</button>
+                                        </div>
+
+                                        <!-- SKU -->
+                                        <div class="mt-3 text-muted">
+                                            <small>SKU: 00000000000</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal del card imagen 4 -->
+        <div class="modal fade" id="ModalImagen4" tabindex="-1" aria-labelledby="ModalImagen4Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="d-flex">
+                        <button type="button" class="btn-close ms-auto m-2" data-bs-dismiss="modal"
+                            aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row g-4">
+                                <!-- Imagen 4-->
+                                <div class="col-md-6">
+                                    <div class="hover-img-container img-thumbnail p-0 border-0">
+                                        <img src="./imgenes/inicio_09.jpg" class="img-default w-100"
+                                            alt="Imagen principal">
+                                        <img src="./imgenes/inicio_09.1.jpg" class="img-hover w-100"
+                                            alt="Imagen al pasar mouse">
+                                    </div>
+                                </div>
+
+                                <!-- Detalles del producto -->
+                                <div class="col-md-6">
+                                    <div>
+                                        <h4 class="fw-bold">Blusa manga corta</h4>
+                                        <div class="mb-2">
+                                            ⭐⭐⭐⭐⭐ <span class="text-muted ms-2">(Aún no hay opiniones)</span>
+                                        </div>
+                                        <h3 class="text-danger">S/. 100.99</h3>
+
+                                        <!-- Tallas -->
+                                        <div class="mt-3">
+                                            <label class="fw-bold">Talla: <span
+                                                    class="text-danger">*obligatorio</span></label>
+                                            <div class="btn-group d-flex flex-wrap gap-2 mt-1" role="group"
+                                                aria-label="Tallas">
+                                                <input type="radio" class="btn-check" name="talla4" id="talla4S"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="talla4S">S</label>
+
+                                                <input type="radio" class="btn-check" name="talla4" id="talla4M"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="talla4M">M</label>
+
+                                                <input type="radio" class="btn-check" name="talla4" id="talla4L"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="talla4L">L</label>
+
+                                                <input type="radio" class="btn-check" name="talla4" id="talla4XL"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="talla4XL">XL</label>
+                                            </div>
+                                        </div>
+
+                                        <!-- Colores -->
+                                        <div class="mt-3">
+                                            <label class="fw-bold">Colores Disponibles: <span
+                                                    class="text-danger">*obligatorio</span></label>
+                                            <div class="d-flex gap-2 mt-1">
+                                                <button class="btn border border-dark p-0"
+                                                    style="width: 40px; height: 40px; background-color: #e596caed;"></button>
+                                                <button class="btn border border-dark p-0"
+                                                    style="width: 40px; height: 40px; background-color:  #be5c1a;"></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Cantidad -->
+                                        <div class="mt-3">
+                                            <label class="fw-bold">Cantidad:</label>
+                                            <div class="input-group" style="max-width: 140px;">
+                                                <button class="btn btn-outline-secondary" type="button">-</button>
+                                                <input type="text" class="form-control text-center" value="1">
+                                                <button class="btn btn-outline-secondary" type="button">+</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Botones -->
+                                        <div class="mt-4 d-grid gap-2">
+                                            <button class="btn btn-dark">AGREGAR AL CARRITO</button>
+                                            <button class="btn btn-outline-secondary">Agregar a la lista de
+                                                deseos</button>
+                                        </div>
+
+                                        <!-- SKU -->
+                                        <div class="mt-3 text-muted">
+                                            <small>SKU: 00000000000</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal del card imagen 5 -->
+        <div class="modal fade" id="ModalImagen5" tabindex="-1" aria-labelledby="ModalImagen5Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="d-flex">
+                        <button type="button" class="btn-close ms-auto m-2" data-bs-dismiss="modal"
+                            aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row g-4">
+                                <!-- Imagen 5-->
+                                <div class="col-md-6">
+                                    <div class="hover-img-container img-thumbnail p-0 border-0">
+                                        <img src="./imgenes/inicio_06.jpg" class="img-default w-100"
+                                            alt="Imagen principal">
+                                        <img src="./imgenes/inicio_06.1.jpg" class="img-hover w-100"
+                                            alt="Imagen al pasar mouse">
+                                    </div>
+                                </div>
+
+                                <!-- Detalles del producto -->
+                                <div class="col-md-6">
+                                    <div>
+                                        <h4 class="fw-bold">Blusa manga corta</h4>
+                                        <div class="mb-2">
+                                            ⭐⭐⭐⭐⭐ <span class="text-muted ms-2">(Aún no hay opiniones)</span>
+                                        </div>
+                                        <h3 class="text-danger">S/. 100.99</h3>
+
+                                        <!-- Tallas -->
+                                        <div class="mt-3">
+                                            <label class="fw-bold">Talla: <span
+                                                    class="text-danger">*obligatorio</span></label>
+                                            <div class="btn-group d-flex flex-wrap gap-2 mt-1" role="group"
+                                                aria-label="Tallas">
+                                                <input type="radio" class="btn-check" name="talla5" id="talla5S"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="talla5S">S</label>
+
+                                                <input type="radio" class="btn-check" name="talla5" id="talla5M"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="talla5M">M</label>
+
+                                                <input type="radio" class="btn-check" name="talla5" id="talla5L"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="talla5L">L</label>
+
+                                                <input type="radio" class="btn-check" name="talla5" id="talla5XL"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="talla5XL">XL</label>
+                                            </div>
+                                        </div>
+
+                                        <!-- Colores -->
+                                        <div class="mt-3">
+                                            <label class="fw-bold">Colores Disponibles: <span
+                                                    class="text-danger">*obligatorio</span></label>
+                                            <div class="d-flex gap-2 mt-1">
+                                                <button class="btn border border-dark p-0"
+                                                    style="width: 40px; height: 40px; background-color: rgb(20, 237, 107);"></button>
+                                                <button class="btn border border-dark p-0"
+                                                    style="width: 40px; height: 40px; background-color: #59687a;"></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Cantidad -->
+                                        <div class="mt-3">
+                                            <label class="fw-bold">Cantidad:</label>
+                                            <div class="input-group" style="max-width: 140px;">
+                                                <button class="btn btn-outline-secondary" type="button">-</button>
+                                                <input type="text" class="form-control text-center" value="1">
+                                                <button class="btn btn-outline-secondary" type="button">+</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Botones -->
+                                        <div class="mt-4 d-grid gap-2">
+                                            <button class="btn btn-dark">AGREGAR AL CARRITO</button>
+                                            <button class="btn btn-outline-secondary">Agregar a la lista de
+                                                deseos</button>
+                                        </div>
+
+                                        <!-- SKU -->
+                                        <div class="mt-3 text-muted">
+                                            <small>SKU: 00000000000</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal del card imagen 6 -->
+        <div class="modal fade" id="ModalImagen6" tabindex="-1" aria-labelledby="ModalImagen9Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="d-flex">
+                        <button type="button" class="btn-close ms-auto m-2" data-bs-dismiss="modal"
+                            aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row g-4">
+                                <!-- Imagen 6-->
+                                <div class="col-md-6">
+                                    <div class="hover-img-container img-thumbnail p-0 border-0">
+                                        <img src="./imgenes/inicio08.jpg" class="img-default w-100"
+                                            alt="Imagen principal">
+                                        <img src="./imgenes/incio_08.1.jpg" class="img-hover w-100"
+                                            alt="Imagen al pasar mouse">
+                                    </div>
+                                </div>
+
+                                <!-- Detalles del producto -->
+                                <div class="col-md-6">
+                                    <div>
+                                        <h4 class="fw-bold">Blusa manga corta</h4>
+                                        <div class="mb-2">
+                                            ⭐⭐⭐⭐⭐ <span class="text-muted ms-2">(Aún no hay opiniones)</span>
+                                        </div>
+                                        <h3 class="text-danger">S/. 100.99</h3>
+
+                                        <!-- Tallas -->
+                                        <div class="mt-3">
+                                            <label class="fw-bold">Talla: <span
+                                                    class="text-danger">*obligatorio</span></label>
+                                            <div class="btn-group d-flex flex-wrap gap-2 mt-1" role="group"
+                                                aria-label="Tallas">
+                                                <input type="radio" class="btn-check" name="talla6" id="talla6S"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="talla6S">S</label>
+
+                                                <input type="radio" class="btn-check" name="talla6" id="talla6M"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="talla6M">M</label>
+
+                                                <input type="radio" class="btn-check" name="talla6" id="talla6L"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="talla6L">L</label>
+
+                                                <input type="radio" class="btn-check" name="talla6" id="talla6XL"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-dark" for="talla6XL">XL</label>
+                                            </div>
+                                        </div>
+
+                                        <!-- Colores -->
+                                        <div class="mt-3">
+                                            <label class="fw-bold">Colores Disponibles: <span
+                                                    class="text-danger">*obligatorio</span></label>
+                                            <div class="d-flex gap-2 mt-1">
+                                                <button class="btn border border-dark p-0"
+                                                    style="width: 40px; height: 40px; background-color: rgb(20, 237, 107);"></button>
+                                                <button class="btn border border-dark p-0"
+                                                    style="width: 40px; height: 40px; background-color: #59687a;"></button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Cantidad -->
+                                        <div class="mt-3">
+                                            <label class="fw-bold">Cantidad:</label>
+                                            <div class="input-group" style="max-width: 140px;">
+                                                <button class="btn btn-outline-secondary" type="button">-</button>
+                                                <input type="text" class="form-control text-center" value="1">
+                                                <button class="btn btn-outline-secondary" type="button">+</button>
+                                            </div>
+                                        </div>
+
+                                        <!-- Botones -->
+                                        <div class="mt-4 d-grid gap-2">
+                                            <button class="btn btn-dark">AGREGAR AL CARRITO</button>
+                                            <button class="btn btn-outline-secondary">Agregar a la lista de
+                                                deseos</button>
+                                        </div>
+
+                                        <!-- SKU -->
+                                        <div class="mt-3 text-muted">
+                                            <small>SKU: 00000000000</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- modal iniciar sesion -->
+    <section>
+        <div class="modal fade" id="modalSesionRequerida" tabindex="-1" aria-labelledby="modalSesionRequeridaLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalSesionRequeridaLabel">Acceso restringido</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        Para acceder a la lista de deseos, primero debe iniciar sesión.
+                    </div>
+                    <div class="modal-footer">
+                        <a href="./persona/iniciar_sesion.html" class="btn btn-primary">Iniciar sesión</a>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white pt-5 mt-5">
+        <div class="container text-center mb-4">
+            <h5>SUSCRÍBETE A NUESTRO BOLETÍN</h5>
+            <p>Mantente al día con lanzamientos, ofertas y noticias especiales.</p>
+            <form class="d-flex justify-content-center">
+                <input type="email" class="form-control texto-blanco w-50 rounded-0 rounded-start bg-black"
+                    placeholder="Tu correo electrónico">
+                <button class="btn btn-light rounded-0 rounded-end" type="submit">Suscribirme</button>
+            </form>
+        </div>
+        <!-- Sobre nosostros con acordeón en móvil -->
+        <div class="bg-light text-dark pt-5 pb-3">
+            <div class="container">
+                <div class="row text-md-start">
+                    <div class="col-12 col-md mb-3">
+                        <!-- Botón solo visible en móvil -->
+                        <button class="btn w-100 text-start d-md-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#acordeonNosotros">
+                            SOBRE NOSOTROS <span class="float-end">+</span>
+                        </button>
+                        <!-- Contenido: colapsable en móvil, visible en desktop -->
+                        <div class="collapse d-md-block" id="acordeonNosotros">
+                            <h6 class="fw-bold d-none d-md-block">SOBRE NOSOTROS</h6>
+                            <p>Más de dos décadas creando moda para la mujer auténtica y soñadora. <br>
+                                Estilo urbano con esencia romántica, hecho en Perú con dedicación y cariño.
+                                Porque cada detalle refleja quién eres.</p>
+                            <p>Contáctanos</p>
+                            <div class="d-flex gap-2 justify-content-md-start color-dorado">
+                                <a href="https://www.facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+                                <a href="https://www.instagram.com" target="_blank"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.youtube.com/" target="_blank"><i class="bi bi-youtube"></i></a>
+                                <a href="https://www.tiktok.com/login" target="_blank"><i
+                                        class="fa-brands fa-tiktok"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navegar con acordeón en móvil -->
+                    <div class="col-12 col-md mb-3">
+                        <!-- Botón solo visible en móvil -->
+                        <button class="btn w-100 text-start d-md-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#acordeonNavegar">
+                            NAVEGAR <span class="float-end">+</span>
+                        </button>
+                        <!-- Contenido: colapsable en móvil, visible en desktop -->
+                        <div class="collapse d-md-block text-md-center" id="acordeonNavegar">
+                            <h6 class="fw-bold d-none d-md-block">NAVEGAR</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="./htmls/accesorios.html"
+                                        class="text-decoration-none text-dark">Accesorios</a></li>
+                                <li><a href="./htmls/oferta.html" class="text-decoration-none text-dark">Oferta</a></li>
+                                <li><a href="./htmls/tienda.html" class="text-decoration-none text-dark">Tienda</a></li>
+                                <li><a href="#" class="text-decoration-none text-dark">Solo para ti</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Marcas Populares con acordeón en móvil -->
+                    <div class="col-12 col-md mb-3">
+                        <!-- Botón visible solo en móvil -->
+                        <button class="btn w-100 text-start d-md-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#acordeonMarcas">
+                            MARCAS POPULARES <span class="float-end">+</span>
+                        </button>
+
+                        <!-- Contenido: colapsable en móvil, visible en escritorio -->
+                        <div class="collapse d-md-block" id="acordeonMarcas">
+                            <h6 class="fw-bold d-none d-md-block">MARCAS POPULARES</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-decoration-none text-dark">Boutique Yanina</a></li>
+                                <li><a href="#" class="text-decoration-none text-dark">Ver todo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Informacióm con acordeón en móvil -->
+                    <div class="col-12 col-md mb-3">
+                        <!-- Botón visible solo en móviles -->
+                        <button class="btn w-100 text-start d-md-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#acordeonInfo">
+                            INFORMACIÓN <span class="float-end">+</span>
+                        </button>
+                        <!-- Contenido colapsable en móvil, visible fijo en desktop -->
+                        <div class="collapse d-md-block" id="acordeonInfo">
+                            <h6 class="fw-bold d-none d-md-block">INFORMACIÓN</h6>
+                            <a href="#">
+                                <img src="https://cdn11.bigcommerce.com/s-dkxrakxun7/images/stencil/original/image-manager/libro-reclamaciones-negro-1-.png"
+                                    alt="Libro de Reclamaciones" class="mb-2" style="max-width: 50%;"></a>
+                            <p><i class="bi bi-geo-alt-fill"></i> Lorem ipsum dolor, sit amet consectetur adipisicing
+                            </p>
+                            <p><i class="bi bi-telephone-fill"></i> +51 000 000 000</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-light text-center py-3 border-top">
+            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <p class="mb-0 text-dark">© Boutique Yanina</p>
+                <div class="d-flex gap-3">
+                    <img src="./icom/amex.png" alt="Amex" height="40">
+                    <img src="./icom/discover.ico" alt="Discover" height="40">
+                    <img src="./icom/mastercad.ico" alt="Mastercard" height="40">
+                    <img src="./icom/visa.png" alt="Visa" height="40">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
