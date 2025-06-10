@@ -16,126 +16,143 @@
 </head>
 
 <body>
+    <!-- HEADER -->
     <header class="sticky-top">
-        <!--logo y nombre de la tienda redes sociales, formulario de busqueda -->
+        <!-- Primera fila: logo, redes, búsqueda, íconos -->
         <div
             class="container-fluid navbar-dark bg-dark d-flex justify-content-between align-items-center position-relative">
-            <!-- ocultamos los iconos en pantallas moviles -->
+            <!-- Botón para colapsar menú en móvil -->
             <button class="navbar-toggler ms-2 d-sm-none" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Redes sociales (solo visibles en sm en adelante) -->
             <div class="ms-2 d-none d-sm-block">
                 <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://www.youtube.com/" target="_blank"><i class="bi bi-youtube"></i></a>
                 <a href="https://www.tiktok.com/login" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-
             </div>
-            <a class="navbar-brand ms-2" href="#">
-                <img src="./imgenes/logooriginality.png" alt="logo" width="90" height="90"
-                    class="d-inline-block align-text-center"> <span>Boutique Yanina</span>
-            </a>
-            <div class="d-flex align-items-center">
-                <!-- formulario de busqueda -->
-                <form class="d-flex" role="search" method="post">
-                    <div class="container-fluid">
-                        <div class="row align-items-center">
-                            <!-- Input visible solo en pantallas grandes -->
-                            <div class="col d-none d-lg-block">
-                                <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar" />
-                            </div>
-                            <!-- Botón de búsqueda (visible siempre) -->
-                            <div class="col-auto">
-                                <button class="btn btn-link text-white" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#mobileSearchInput" aria-expanded="false"
-                                    aria-controls="mobileSearchInput">
-                                    <i class="bi bi-search" style="font-size: 1rem;"></i>
-                                </button>
-                            </div>
-                        </div>
 
-                        <!-- Input colapsable para móviles (ocupa toda la fila) -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="collapse d-lg-none mt-2" id="mobileSearchInput">
-                                    <input class="form-control w-100" type="search" placeholder="Buscar"
-                                        aria-label="Buscar" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                <!-- icono carrito -->
-                <a href="#offcanvasCarrito" class="d-none d-sm-block" data-bs-toggle="offcanvas" role="button"
-                    aria-controls="offcanvasCarrito">
-                    <i class="bi bi-cart"></i>
+            <!-- Logo -->
+            <div class="mx-auto d-flex align-items-center justify-content-center text-center">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="./imgenes/logooriginality.PNG" alt="logo" width="80" height="80"
+                        class="d-inline-block align-middle">
+                    <span class="ms-2 fs-5">Boutique Yanina</span>
                 </a>
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito"
-                    aria-labelledby="offcanvasCarritoLabel">
-                    <div class="offcanvas-header">
-                        <h5 id="offcanvasCarritoLabel">Tu carrito</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                            aria-label="Cerrar"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <p>Tu carrito esta vacío.</p>
-                    </div>
-                </div>
-                <!-- Icono persona -->
-                <div class="dropdown d-none d-sm-block">
-                    <a class="btn dropdown-toggle" href="#" role="button" id="dropdownUser" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <i class="bi bi-person"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser">
-                        <li><a class="dropdown-item" href="./persona/iniciar_sesion.html">Iniciar Sesión</a></li>
-                        <li><a class="dropdown-item" href="./persona/registrarse.html">Registrase</a></li>
-                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
-                                data-bs-target="#modalSesionRequerida">Lista de deseo</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
-                    </ul>
-                </div>
+            </div>
 
+            <!-- Búsqueda + Íconos -->
+            <div class="d-flex align-items-center">
+                <!-- Formulario búsqueda -->
+                <form class="d-flex align-items-center" role="search" method="#">
+                    <!-- Input y botón para pantallas grandes -->
+                    <div class="d-none d-md-flex align-items-center">
+                        <input class="form-control rounded-start" type="search" placeholder="Buscar"
+                            aria-label="Buscar" />
+                        <button class="btn btn-dark rounded-end" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+
+                    <!-- Botón para abrir modal en móvil -->
+                    <button class="btn btn-link text-white d-md-none" type="button" data-bs-toggle="modal"
+                        data-bs-target="#searchModal">
+                        <i class="bi bi-search" style="font-size: 1.2rem;"></i>
+                    </button>
+                </form>
+            </div>
+
+
+            <!-- Ícono carrito - visible en desktop -->
+            <a href="#offcanvasCarrito" class="d-none d-sm-block ms-2" data-bs-toggle="offcanvas" role="button"
+                aria-controls="offcanvasCarrito">
+                <i class="bi bi-cart"></i>
+            </a>
+
+            <!-- Offcanvas carrito -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrito"
+                aria-labelledby="offcanvasCarritoLabel">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasCarritoLabel">Tu carrito</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <p>Tu carrito está vacío.</p>
+                </div>
+            </div>
+
+            <!-- Ícono persona - visible en desktop -->
+            <div class="dropdown d-none d-sm-block ms-2">
+                <a class="btn dropdown-toggle" href="#" role="button" id="dropdownUser" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="bi bi-person"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser">
+                    <li><a class="dropdown-item" href="./persona/iniciar_sesion.html">Iniciar Sesión</a></li>
+                    <li><a class="dropdown-item" href="./persona/registrarse.html">Registrarse</a></li>
+                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                            data-bs-target="#modalSesionRequerida">Lista de deseo</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                </ul>
             </div>
         </div>
+        </div>
 
-        <!--menu de navegación-->
+        <!-- NAVBAR -->
         <nav class="navbar navbar-expand-sm">
             <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo01">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active text-black ms-2" aria-current="page" href="#">Inicio</a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link active text-black ms-2" aria-current="page"
-                            href="./htmls/accesorios.html">Accesosrios</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active text-black ms-2" aria-current="page"
-                            href="./htmls/oferta.html">Oferta</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active text-black ms-2" aria-current="page"
-                            href="./htmls/tienda.html">Tienda</a>
+                        <a class="nav-link active text-black ms-2" href="./htmls/accesorios.html">Accesorios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-black ms-2" aria-current="page"
-                            href="./htmls/contacto.html">Contactanos</a>
+                        <a class="nav-link active text-black ms-2" href="./htmls/oferta.html">Oferta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-black ms-2" href="./htmls/tienda.html">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-black ms-2" href="./htmls/contacto.html">Contáctanos</a>
+                    </li>
+
+                    <!-- Íconos visibles en móvil dentro del menú -->
+                    <li class="nav-item d-block d-sm-none">
+                        <a href="#offcanvasCarrito" class="nav-link text-black" data-bs-toggle="offcanvas"
+                            aria-controls="offcanvasCarrito">
+                            <i class="bi bi-cart"></i> Carrito
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown d-block d-sm-none">
+                        <a class="nav-link dropdown-toggle text-black" href="#" id="dropdownUserMobile" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person"></i> Cuenta
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownUserMobile">
+                            <li><a class="dropdown-item" href="./persona/iniciar_sesion.html">Iniciar Sesión</a></li>
+                            <li><a class="dropdown-item" href="./persona/registrarse.html">Registrarse</a></li>
+                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#modalSesionRequerida">Lista de deseo</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                        </ul>
                     </li>
                 </ul>
-
-            </div>
             </div>
         </nav>
     </header>
+
 
     <!-- video de presentación de la pagina -->
     <section class="video-section mt-5">
@@ -1256,6 +1273,29 @@
                 </div>
             </div>
         </div>
+
+        <!-- Modal de búsqueda para móviles -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen-sm-down">
+                <div class="modal-content bg-transparent border-0">
+                    <div class="modal-body d-flex justify-content-center align-items-center"
+                        style="height: 100vh; backdrop-filter: blur(5px);">
+                        <form class="d-flex w-100 px-3" style="max-width: 600px;" role="search">
+                            <input class="form-control form-control-lg rounded-0 rounded-start" type="search"
+                                placeholder="Buscar en la tienda" aria-label="Buscar">
+                            <button class="btn btn-dark rounded-0 rounded-end px-4" type="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+                            <!-- Botón de cerrar arriba a la derecha -->
+                            <button type="button" class="btn position-absolute top-0 end-0 m-3 text-white"
+                                data-bs-dismiss="modal" aria-label="Cerrar">
+                                <i class="bi bi-x-lg"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer class="bg-black text-white pt-5 mt-5">
@@ -1284,7 +1324,7 @@
                             <p>Más de dos décadas creando moda para la mujer auténtica y soñadora. <br>
                                 Estilo urbano con esencia romántica, hecho en Perú con dedicación y cariño.
                                 Porque cada detalle refleja quién eres.</p>
-                            <p>Contáctanos</p>
+                            <p>Siguenos</p>
                             <div class="d-flex gap-2 justify-content-md-start color-dorado">
                                 <a href="https://www.facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
                                 <a href="https://www.instagram.com" target="_blank"><i
@@ -1311,7 +1351,8 @@
                                         class="text-decoration-none text-dark">Accesorios</a></li>
                                 <li><a href="./htmls/oferta.html" class="text-decoration-none text-dark">Oferta</a></li>
                                 <li><a href="./htmls/tienda.html" class="text-decoration-none text-dark">Tienda</a></li>
-                                <li><a href="#" class="text-decoration-none text-dark">Solo para ti</a></li>
+                                <li><a href="./htmls/contacto.html"
+                                        class="text-decoration-none text-dark">Contáctanos</a></li>
                             </ul>
                         </div>
                     </div>

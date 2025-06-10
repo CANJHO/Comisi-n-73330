@@ -7,7 +7,7 @@ body {
   background-color: aliceblue;
 }
 
-/* textos del header y red social */
+/* enlaces y redes sociales */
 .navbar a {
   color: black !important;
   background-color: transparent;
@@ -25,15 +25,16 @@ body {
   font-family: 'Cinzel Decorative', cursive;
 }
 
+
 .container-fluid a i {
   color: gold !important;
 }
 
-/*Icono persona*/
+/* menú desplegable persona */
 .dropdown-item {
   color: black !important;
   background-color: transparent;
-  transition: background-color 0.3s ease, color 0.3s ease
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dropdown-item:hover {
@@ -491,13 +492,11 @@ textarea {
 @media (max-width: 576px) {
   header .container-fluid {
     align-items: center;
-    padding: auto;
   }
 
   .navbar a {
     color: black !important;
     background-color: transparent;
-    transition: background-color;
   }
 
   .navbar a:hover {
@@ -530,6 +529,13 @@ textarea {
 
   .contenedor-registrarse {
     grid-template-columns: 1fr;
+  }
+
+  .campo-registrarse label,
+  .obligatorio,
+  input,
+  select {
+    margin-left: 1rem;
   }
 
   .container-persona {
