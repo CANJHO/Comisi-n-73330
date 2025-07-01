@@ -8,7 +8,7 @@
   display: block;
   object-fit: cover;
 
-  // Ajuste para pantallas grandes
+  /* Ajuste para pantallas grandes*/
   @media (min-width: $breakpoint-lg) {
     height: 500px;
   }

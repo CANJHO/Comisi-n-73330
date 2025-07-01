@@ -1,22 +1,24 @@
 
-@use 'base/global';
+
 @use 'base/variables';
 @use 'base/mixins';
+@use 'base/global';
 
+@use 'diseno/navbar';
+@use 'paginas/inicio';
+@use 'componentes/video';
+@use 'componentes/decorativo';
+@use 'componentes/marquee';
 @use 'componentes/buttons';
 @use 'componentes/card';
 @use 'componentes/carousel';
-@use 'componentes/decorativo';
-@use 'componentes/marquee';
+
+
 @use 'componentes/modal';
-@use 'componentes/video';
-
-@use 'diseno/footer';
-@use 'diseno/navbar';
-
-@use 'paginas/inicio';
+@use 'paginas/tienda';
+@use 'paginas/contacto';
 @use 'paginas/registro';
 @use 'paginas/login';
-@use 'paginas/contacto';
-@use 'paginas/tienda';
 
+
+@use 'diseno/footer';

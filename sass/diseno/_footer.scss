@@ -1,11 +1,11 @@
 @use '../base/variables' as *;
 
-// Estilo para texto blanco (como en input del footer)
+/* Estilo para texto blanco (como en input del footer)*/
 .texto-blanco {
   color: $color-white !important;
 }
 
-// Enlaces con color dorado (normalmente usados en el footer)
+/* Enlaces con color dorado (normalmente usados en el footer)*/
 .color-dorado a {
   color: $color-black !important;
 }

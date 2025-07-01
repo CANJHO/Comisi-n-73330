@@ -1,7 +1,7 @@
 @use '../base/variables' as *;
 @use '../base/mixins' as *;
 
-// Botón genérico reutilizable
+/*Botón genérico reutilizable*/
 .boton {
   margin-top: 15px;
 }
@@ -14,27 +14,27 @@ button,
   font-size: 1rem;
 }
 
-// Botones específicos
+ /*Botones específicos*/
 
-// Botón de formulario contacto
+/* Botón de formulario contacto*/
 .boton-contacto {
   display: flex;
   justify-content: center;
 }
 
-// Botón persona (login/registro)
+/* Botón persona (login/registro)*/
 .boton-persona {
   text-decoration-line: none;
   border-radius: $border-radius-md;
 }
 
-// Botón en sección registrar
+/* Botón en sección registrar*/
 .boton-registrarse {
   text-align: center;
   margin-top: 30px;
 }
 
-// Mueve el estilo de button fuera de la regla .boton-registrarse
+/* Mueve el estilo de button fuera de la regla .boton-registrarse*/
 .boton-registrarse button {
   font-size: 1em;
   padding: 10px 25px;

@@ -1,12 +1,12 @@
 @use '../base/variables' as *;
 
-// Contenedor general del cuerpo del modal
+/* Contenedor general del cuerpo del modal*/
 .modal-body .hover-img-container {
   max-width: 100%;
   margin: auto;
 }
 
-// Contenedor de imagen con efecto hover
+/* Contenedor de imagen con efecto hover*/
 .hover-img-container {
   position: relative;
   overflow: hidden;

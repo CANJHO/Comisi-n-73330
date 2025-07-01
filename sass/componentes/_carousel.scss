@@ -1,6 +1,6 @@
 @use '../base/variables' as *;
 
-// Personalización de los íconos del carrusel
+/* Personalización de los íconos del carrusel*/
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   filter: invert(1); // Invierten el color (útil si el fondo es oscuro)

@@ -1,6 +1,7 @@
 @use '../base/variables' as *;
 @use '../base/mixins' as *;
-
+/*-------estilo para el carrusel inicio-----------*/
+/*estilo para las tarjetas*/
 .card {
   width: $card-width;
   max-width: 100%;
@@ -19,7 +20,7 @@
   }
 }
 
-// Estilo de animación suave al hacer hover en imágenes
+/* Estilo de animación suave al hacer hover en imágenes*/
 .image-hover {
   transition: transform $transition-default, box-shadow $transition-default;
 
@@ -29,7 +30,7 @@
   }
 }
 
-// Imagen que hace zoom dentro de una tarjeta
+/* Imagen que hace zoom dentro de una tarjeta*/
 .zoom-imagen {
   transition: transform 0.4s ease;
   display: block;
