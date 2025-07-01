@@ -1,0 +1,61 @@
+@use '../base/variables' as *;
+
+.container-persona {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 30px;
+}
+
+.sesion-from,
+.registrar {
+  flex: 1 1 300px;
+  max-width: 450px;
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.registrar {
+  background: #f3f3f3;
+
+  ul {
+    padding-left: 20px;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.caja {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.caja2 {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.accion {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.boton-persona {
+  text-decoration-line: none;
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

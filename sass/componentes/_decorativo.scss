@@ -1,0 +1,22 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+// Línea decorativa para encabezados
+.decorative-line {
+  width: 80px;
+  height: 3px;
+  background-color: $color-black;
+
+  @include respond-to(sm) {
+    width: 50px;
+  }
+}
+
+// Estilo general para todos los títulos h2
+h2 {
+  font-family: $font-primary;
+
+  @include respond-to(sm) {
+    font-size: 1rem;
+  }
+}

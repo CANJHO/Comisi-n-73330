@@ -1,0 +1,25 @@
+@use '../base/variables' as *;
+/* Animación para el anuncio inicio, accesosrio, oferta y tienda*/
+.mover {
+  overflow: hidden;
+  background-color: $color-black;
+  padding: 0.1px 0;
+
+  p {
+    font-family: $font-primary;
+    white-space: nowrap;
+    display: inline-block;
+    padding-left: 100%;
+    animation: muevete 5s linear infinite;
+    color: $color-gold;
+  }
+}
+
+@keyframes muevete {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

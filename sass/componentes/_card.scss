@@ -1,0 +1,40 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.card {
+  width: $card-width;
+  max-width: 100%;
+  padding: $card-padding;
+  text-align: center;
+  margin: 1rem;
+
+  @include respond-to(sm) {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &:hover .zoom-imagen {
+    transform: scale(1.1);
+  }
+}
+
+// Estilo de animación suave al hacer hover en imágenes
+.image-hover {
+  transition: transform $transition-default, box-shadow $transition-default;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px $color-shadow;
+  }
+}
+
+// Imagen que hace zoom dentro de una tarjeta
+.zoom-imagen {
+  transition: transform 0.4s ease;
+  display: block;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}

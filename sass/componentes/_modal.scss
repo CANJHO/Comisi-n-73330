@@ -1,0 +1,46 @@
+@use '../base/variables' as *;
+
+// Contenedor general del cuerpo del modal
+.modal-body .hover-img-container {
+  max-width: 100%;
+  margin: auto;
+}
+
+// Contenedor de imagen con efecto hover
+.hover-img-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: $border-radius-md;
+  height: 500px;
+  aspect-ratio: 3 / 4;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  .img-default {
+    z-index: 1;
+    opacity: 1;
+  }
+
+  .img-hover {
+    z-index: 2;
+    opacity: 0;
+  }
+
+  &:hover {
+    .img-hover {
+      opacity: 1;
+    }
+
+    .img-default {
+      opacity: 0;
+    }
+  }
+}

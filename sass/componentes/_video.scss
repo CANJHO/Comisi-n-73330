@@ -1,0 +1,15 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+/* video de presentacion de la pagina de inicio*/
+.video-fluid {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+
+  // Ajuste para pantallas grandes
+  @media (min-width: $breakpoint-lg) {
+    height: 500px;
+  }
+}

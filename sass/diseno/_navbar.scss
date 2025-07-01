@@ -1,0 +1,57 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+/* NAVBAR */
+.navbar {
+  background-color: $color-background;
+
+  a {
+    color: $color-black !important;
+    background-color: transparent;
+    transition: background-color $transition-default, color $transition-default;
+
+    &:hover {
+      background-color: $color-gold;
+      color: white !important;
+      border-radius: 5px;
+    }
+  }
+
+
+}
+  .navbar-brand {
+    color: $color-gold !important;
+    font-family: $font-primary;
+  }
+
+  .container-fluid a i {
+    color: $color-gold !important;
+  }
+
+/* Dropdown menú persona */
+.dropdown-item {
+  color: $color-black !important;
+  background-color: transparent;
+  transition: background-color $transition-default, color $transition-default;
+
+  &:hover {
+    background-color: $color-gold;
+    color: white !important;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  header .container-fluid {
+    align-items: center;
+  }
+
+  .navbar a {
+    color: black !important;
+    background-color: transparent;
+  }
+
+  .navbar a:hover {
+    background-color: gold;
+    color: white !important;
+  }
+}

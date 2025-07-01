@@ -1,0 +1,41 @@
+
+//Mixin para media queries
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: 576px) { @content; }
+  } @else if $breakpoint == md {
+    @media (max-width: 768px) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: 992px) { @content; }
+  } @else if $breakpoint == xl {
+    @media (max-width: 1200px) { @content; }
+  }
+}
+
+// Mixin para botones básicos
+@mixin button-style($bg-color: black, $text-color: white) {
+  padding: 10px 20px;
+  background-color: $bg-color;
+  color: $text-color;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// Mixin para centrado flex
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin para sombreado simple
+@mixin simple-shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,49 @@
+@use '../base/variables' as *;
+
+
+.contacto {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+.datos-generales {
+  width: 250px;
+  margin-bottom: 30px;
+  text-align: justify;
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 14px;
+    margin: 6px 0;
+  }
+}
+
+.boton {
+  margin-top: 15px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.titulo-tienda {
+  margin-top: 40px;
+  text-align: center;
+  font-family: 'Cinzel Decorative', cursive;
+}
