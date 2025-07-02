@@ -4,7 +4,10 @@
 .texto-blanco {
   color: $color-white !important;
 }
-
+/* Estilo para texto blanco (placeholder)*/
+#email::placeholder{
+  color:$color-white !important;
+}
 /* Enlaces con color dorado (normalmente usados en el footer)*/
 .color-dorado a {
   color: $color-black !important;

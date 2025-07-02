@@ -4,38 +4,52 @@
 
 .contacto {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 90px;
   padding: 40px 20px;
 }
 
 .datos-generales {
-  width: 250px;
-  margin-bottom: 30px;
+  flex: 1 1 250px;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: justify;
+  padding: 20px;
+
 
   h2 {
     font-size: 20px;
     margin-bottom: 10px;
+    text-align: center;
   }
 
   p {
     font-size: 14px;
     margin: 6px 0;
   }
-}
 
-.boton {
-  margin-top: 15px;
+  .boton {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    a {
+      text-decoration: none;
+    }
+  }
 }
 
 button {
-  margin: 5px;
   padding: 10px 20px;
   background-color: black;
   color: white;
   font-weight: bold;
   border: none;
+  border-radius: 6px;
   cursor: pointer;
 
   &:hover {
