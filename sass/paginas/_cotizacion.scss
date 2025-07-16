@@ -1,0 +1,95 @@
+// Variables
+$font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$color-bg: #f7f9fb;
+$color-text: #333;
+$color-white: #ffffff;
+$color-title: #005792;
+$color-section: #0074b7;
+$color-price: #2e7d32;
+$color-total: #d84315;
+$color-note: #555;
+$border-gray: #e0e0e0;
+$border-dash: #ccc;
+/*estilo archivo de cotización*/
+// Global styles
+body {
+  font-family: $font-main;
+  background: $color-bg;
+  margin: 0;
+  padding: 20px;
+  color: $color-text;
+}
+
+// Cotización contenedor
+.cotizacion {
+  max-width: 800px;
+  margin: auto;
+  background: $color-white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+
+  h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: $color-title;
+  }
+}
+
+// Secciones
+.seccion {
+  margin-bottom: 30px;
+
+  h2 {
+    font-size: 20px;
+    color: $color-section;
+    margin-bottom: 10px;
+    border-bottom: 2px solid $border-gray;
+    padding-bottom: 5px;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+
+    li {
+      margin-bottom: 6px;
+    }
+  }
+}
+
+// Precio
+.precio {
+  font-weight: bold;
+  color: $color-price;
+  font-size: 16px;
+  float: right;
+}
+
+// Total
+.total {
+  text-align: right;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: $color-total;
+}
+
+// Nota
+.nota {
+  font-style: italic;
+  color: $color-note;
+  margin-top: 30px;
+  font-size: 14px;
+  border-top: 1px dashed $border-dash;
+  padding-top: 15px;
+}
+
+// Limpiar flotado
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
