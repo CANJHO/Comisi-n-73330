@@ -587,14 +587,6 @@ textarea {
 }
 
 /*estilo archivo de cotización*/
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: #f7f9fb;
-  margin: 0;
-  padding: 20px;
-  color: #333;
-}
-
 .cotizacion {
   max-width: 800px;
   margin: auto;

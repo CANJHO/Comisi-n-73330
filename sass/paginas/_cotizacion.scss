@@ -11,15 +11,6 @@ $color-note: #555;
 $border-gray: #e0e0e0;
 $border-dash: #ccc;
 /*estilo archivo de cotización*/
-// Global styles
-body {
-  font-family: $font-main;
-  background: $color-bg;
-  margin: 0;
-  padding: 20px;
-  color: $color-text;
-}
-
 // Cotización contenedor
 .cotizacion {
   max-width: 800px;
